@@ -94,44 +94,45 @@
 
   <section class="contact_section layout_padding">
     <div class="container">
-      <div class="heading_container">
-        <h2>Contacto</h2>
-      </div>
-      <div class="row">
-        <!-- Columna del formulario -->
-        <div class="col-md-6">
-          <form id="contactForm">
-            <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Nombre" required />
-            </div>
-            <div class="form-group">
-              <input type="text" id="phone" class="form-control" placeholder="Número Telefónico" required />
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Correo" required />
-            </div>
-            <div class="form-group">
-              <textarea id="message" class="form-control message-box" placeholder="Mensaje" required></textarea>
-            </div>
-            <div class="form-group d-flex">
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-          </form>
-          <div id="responseMessage" class="alert alert-success" style="display:none; margin-top:20px;">
-            Datos enviados correctamente. ¡Gracias por contactarnos!
-          </div>
+        <div class="heading_container">
+            <h2>Contacto</h2>
         </div>
-        <!-- Columna del mapa -->
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map" style="width:100%;height:100%;">
-              <div id="googleMap" style="width:100%;height:100%;"></div>
+        <div class="row">
+            <!-- Columna del formulario -->
+            <div class="col-md-6">
+                <form id="contactForm" action="send_mail.php" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Nombre" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Número Telefónico" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Correo" required />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control message-box" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <div class="form-group d-flex">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+                <div id="responseMessage" class="alert alert-success" style="display:none; margin-top:20px;">
+                    Datos enviados correctamente. ¡Gracias por contactarnos!
+                </div>
             </div>
-          </div>
+            <!-- Columna del mapa -->
+            <div class="col-md-6">
+                <div class="map_container">
+                    <div class="map" style="width:100%;height:100%;">
+                        <div id="googleMap" style="width:100%;height:100%;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
 
 
